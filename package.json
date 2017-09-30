@@ -1,0 +1,35 @@
+{
+  "name": "hapi-require-https-with-port-option",
+  "version": "1.0.0",
+  "description": "Another hapi redirect http to https plugin",
+  "main": "lib/index.js",
+  "repository": "git://github.com/visualjeff/hapi-require-https-with-port-option",
+  "bug": {
+    "url": "https://github.com/visualjeff/hapi-require-https-with-port-option/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapi",
+    "plugin",
+    "https",
+    "tls"
+  ],
+  "engines": {
+    "node": ">=6.8.0"
+  },
+  "dependencies": {
+    "joi": "^10.2.2"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "hapi": "^16.1.0",
+    "lab": "^13.0.1"
+  },
+  "scripts": {
+    "test": "lab -r console -t 100 -a code -L",
+    "test-cov-html": "lab -r html -o coverage.html -a code -L"
+  },
+  "license": "MIT"
+}
