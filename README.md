@@ -1,5 +1,10 @@
-hapi-redirect-to-https [![Build Status](https://travis-ci.org/visualjeff/hapi-redirect-to-https.svg?branch=master)](https://travis-ci.org/visualjeff/hapi-redirect-to-https)
+hapi-redirect-to-https
 ==================
+
+[![Build Status](https://travis-ci.org/visualjeff/hapi-redirect-to-https.png)](https://travis-ci.org/visualjeff/hapi-redirect-to-https)
+[![bitHound Overall Score](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https/badges/score.svg)](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https)
+[![bitHound Dependencies](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https/badges/dependencies.svg)](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https/badges/code.svg)](https://www.bithound.io/github/visualjeff/hapi-redirect-to-https)
 
 > hapi plugin that adds http to https redirection (NOTE: This plugin extends the functionality of hapi-require-https)
 
