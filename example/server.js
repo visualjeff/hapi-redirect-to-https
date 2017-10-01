@@ -6,17 +6,18 @@ const Fs = require('fs');
 const server = new Hapi.Server();
 
 //To avoid a self-signed certificate issue.
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const tlsOptions = {
     passphrase: '',
     //Self signed certs for example only
     key: Fs.readFileSync('certs/server.key'),
     cert: Fs.readFileSync('certs/server.crt')
-}
+};
 
 //Configure http
 server.connection({
+    host: '0.0.0.0',
     port: 3000
 });
 
@@ -29,14 +30,13 @@ server.connection({
 
 //Register the plugin and a simple hello world route
 server.register([{
-        register: require('../'),
-        options: {
-            proxy: false,
-            tlsPort: 4000
-        }
-    }, {
-        register: require('./routes/applicationRoutes')
-    }], (err) => {
+    register: require('../'),
+    options: {
+        proxy: false
+    }
+}, {
+    register: require('./routes/applicationRoutes')
+}], (err) => {
 
     if (err) {
         throw err;
@@ -49,7 +49,13 @@ server.start((err) => {
         throw err;
     }
 
-    console.dir('Server running at http://localhost:3000', {
-        colors: true
+    server.connections.forEach((connection) => {
+
+        const protocol = connection.info.protocol;
+        const host = connection.info.host;
+        const port = connection.info.port;
+        console.dir(`Server listening at ${protocol}://${host}:${port}`, {
+            colors: true
+        });
     });
 });

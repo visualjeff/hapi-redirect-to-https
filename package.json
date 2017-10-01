@@ -1,14 +1,11 @@
 {
-  "name": "hapi-require-https-with-port-option",
+  "name": "hapi-redirect-to-https",
   "version": "1.0.0",
-  "description": "Another hapi redirect http to https plugin",
+  "description": "Another hapi redirect http to https plugin.  This version is can work with ports other than 443.",
   "main": "lib/index.js",
-  "repository": "git://github.com/visualjeff/hapi-require-https-with-port-option",
+  "repository": "git://github.com/visualjeff/hapi-redirect-to-https",
   "bug": {
-    "url": "https://github.com/visualjeff/hapi-require-https-with-port-option/issues"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "url": "https://github.com/visualjeff/hapi-redirect-to-https/issues"
   },
   "keywords": [
     "hapi",

@@ -10,7 +10,8 @@ const routes = {
                 auth: false, //Public access allowed
                 description: 'Route is website root'
             },
-            handler: function (request, reply) {
+            handler: (request, reply) => {
+
                 reply('Hello HTTPS world!');
             }
         });
